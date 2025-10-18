@@ -12,5 +12,5 @@ void main() {
   final xml = comicInfoFile.readAsStringSync();
   final info = XmlComicInfo.fromXmlString(xml);
   print(info);
-  print(info.toXmlString(info));
+  print(info.toXmlString());
 }

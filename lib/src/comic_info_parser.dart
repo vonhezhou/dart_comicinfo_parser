@@ -165,9 +165,9 @@ class XmlComicPageInfo {
 @xml_annotation.XmlSerializable()
 class XmlArrayOfComicPageInfo {
   @xml_annotation.XmlElement(name: 'Page')
-  final List<XmlComicPageInfo> pages;
+  final List<XmlComicPageInfo>? pages;
 
-  const XmlArrayOfComicPageInfo({this.pages = const []});
+  const XmlArrayOfComicPageInfo({this.pages});
 
   factory XmlArrayOfComicPageInfo.fromXmlElement(XmlElement e) =>
       _$XmlArrayOfComicPageInfoFromXmlElement(e);
@@ -523,10 +523,10 @@ class XmlComicInfo {
   }
 
   /// 把 ComicInfo 序列化成 XML 字符串
-  String toXmlString(XmlComicInfo info) {
+  String toXmlString() {
     final builder = XmlBuilder();
     builder.processing('xml', 'version="1.0" encoding="utf-8"');
-    info.buildXmlElement(builder);
+    buildXmlElement(builder);
     return builder.buildDocument().toXmlString(pretty: true);
   }
 

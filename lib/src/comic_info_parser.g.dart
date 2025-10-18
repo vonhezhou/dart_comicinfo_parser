@@ -237,13 +237,15 @@ void _$XmlArrayOfComicPageInfoBuildXmlChildren(
 }) {
   final pages = instance.pages;
   final pagesSerialized = pages;
-  for (final value in pagesSerialized) {
-    builder.element(
-      'Page',
-      nest: () {
-        value.buildXmlChildren(builder, namespaces: namespaces);
-      },
-    );
+  if (pagesSerialized != null) {
+    for (final value in pagesSerialized) {
+      builder.element(
+        'Page',
+        nest: () {
+          value.buildXmlChildren(builder, namespaces: namespaces);
+        },
+      );
+    }
   }
 }
 
@@ -264,9 +266,9 @@ void _$XmlArrayOfComicPageInfoBuildXmlElement(
 XmlArrayOfComicPageInfo _$XmlArrayOfComicPageInfoFromXmlElement(
   XmlElement element,
 ) {
-  final pages = element.getElements('Page')!;
+  final pages = element.getElements('Page');
   return XmlArrayOfComicPageInfo(
-    pages: pages.map((e) => XmlComicPageInfo.fromXmlElement(e)).toList(),
+    pages: pages?.map((e) => XmlComicPageInfo.fromXmlElement(e)).toList(),
   );
 }
 
@@ -285,14 +287,16 @@ List<XmlNode> _$XmlArrayOfComicPageInfoToXmlChildren(
   final children = <XmlNode>[];
   final pages = instance.pages;
   final pagesSerialized = pages;
-  final pagesConstructed = pagesSerialized.map(
+  final pagesConstructed = pagesSerialized?.map(
     (e) => XmlElement(
       XmlName('Page'),
       e.toXmlAttributes(namespaces: namespaces),
       e.toXmlChildren(namespaces: namespaces),
     ),
   );
-  children.addAll(pagesConstructed);
+  if (pagesConstructed != null) {
+    children.addAll(pagesConstructed);
+  }
   return children;
 }
 
