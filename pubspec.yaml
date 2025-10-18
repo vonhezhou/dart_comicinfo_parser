@@ -1,19 +1,30 @@
 name: comic_info_parser
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/vonhezhou/dart_comicinfo_parser
+
+topics:
+  - comicinfo
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: ^3.9.2
 
 # Add regular dependencies here.
 dependencies:
-  xml_serializable: ^2.5.4
   xml_annotation: ^2.4.0
   xml: ^6.6.1
   # path: ^1.9.0
 
 dev_dependencies:
+  xml_serializable: ^2.5.4
   build_runner: ^2.5.4
   lints: ^6.0.0
   test: ^1.25.6
