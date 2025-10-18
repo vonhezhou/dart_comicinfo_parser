@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      
+        {
+            "name": "Debug comic_info_parser_example",
+            "type": "dart",
+            "request": "launch",
+            "program": "example/comic_info_parser_example.dart"
+        }
+    ]
+}
