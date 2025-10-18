@@ -90,7 +90,7 @@ void main() {
 
     group('XML Parsing', () {
       test('should parse basic XML correctly', () {
-        final info = XmlComicInfo.fromXmlString(basicXml);
+        final info = XmlComicInfo.fromXmlString(basicXml).withDefaultValues();
 
         expect(info.title, equals('Test Comic'));
         expect(info.series, equals('Test Series'));
@@ -117,7 +117,7 @@ void main() {
       });
 
       test('should parse full XML with all fields correctly', () {
-        final info = XmlComicInfo.fromXmlString(fullXml);
+        final info = XmlComicInfo.fromXmlString(fullXml).withDefaultValues();
 
         expect(info.title, equals('Full Test Comic'));
         expect(info.series, equals('Full Test Series'));
@@ -171,12 +171,12 @@ void main() {
       });
 
       test('should parse pages correctly', () {
-        final info = XmlComicInfo.fromXmlString(fullXml);
+        final info = XmlComicInfo.fromXmlString(fullXml).withDefaultValues();
 
         expect(info.pages, isNotNull);
         expect(info.pages!.pages, isNotNull);
         expect(info.pages!.pages!.length, equals(3));
-        
+
         final page1 = info.pages!.pages![0];
         expect(page1.image, equals(1));
         expect(page1.type, equals(XmlComicPageType.frontCover));
@@ -207,7 +207,7 @@ void main() {
 
       test('should handle empty XML with default values', () {
         const emptyXml = '<ComicInfo></ComicInfo>';
-        final info = XmlComicInfo.fromXmlString(emptyXml);
+        final info = XmlComicInfo.fromXmlString(emptyXml).withDefaultValues();
 
         expect(info.title, equals(''));
         expect(info.series, equals(''));
@@ -241,11 +241,13 @@ void main() {
 
     group('XML Serialization', () {
       test('should serialize basic XML correctly', () {
-        final info = XmlComicInfo.fromXmlString(basicXml);
+        final info = XmlComicInfo.fromXmlString(basicXml).withDefaultValues();
         final serializedXml = info.toXmlString();
 
         // Parse the serialized XML to verify it's valid
-        final parsedInfo = XmlComicInfo.fromXmlString(serializedXml);
+        final parsedInfo = XmlComicInfo.fromXmlString(
+          serializedXml,
+        ).withDefaultValues();
 
         expect(parsedInfo.title, equals(info.title));
         expect(parsedInfo.series, equals(info.series));
@@ -270,11 +272,13 @@ void main() {
       });
 
       test('should serialize full XML with all fields correctly', () {
-        final info = XmlComicInfo.fromXmlString(fullXml);
+        final info = XmlComicInfo.fromXmlString(fullXml).withDefaultValues();
         final serializedXml = info.toXmlString();
 
         // Parse the serialized XML to verify it's valid
-        final parsedInfo = XmlComicInfo.fromXmlString(serializedXml);
+        final parsedInfo = XmlComicInfo.fromXmlString(
+          serializedXml,
+        ).withDefaultValues();
 
         expect(parsedInfo.title, equals(info.title));
         expect(parsedInfo.series, equals(info.series));
@@ -325,11 +329,13 @@ void main() {
       });
 
       test('should serialize pages correctly', () {
-        final info = XmlComicInfo.fromXmlString(fullXml);
+        final info = XmlComicInfo.fromXmlString(fullXml).withDefaultValues();
         final serializedXml = info.toXmlString();
 
         // Parse the serialized XML to verify pages are correct
-        final parsedInfo = XmlComicInfo.fromXmlString(serializedXml);
+        final parsedInfo = XmlComicInfo.fromXmlString(
+          serializedXml,
+        ).withDefaultValues();
 
         expect(parsedInfo.pages, isNotNull);
         expect(parsedInfo.pages!.pages, isNotNull);
@@ -348,6 +354,14 @@ void main() {
         expect(page3.image, equals(3));
         expect(page3.type, equals(XmlComicPageType.story));
         expect(page3.doublePage, isTrue);
+      });
+
+      test('should only serialize set properties', () {
+        final info = XmlComicInfo.fromXmlString(basicXml);
+        final serializedXml = info.toXmlString();
+        expect(serializedXml.contains('Pages'), isTrue);
+        expect(serializedXml.contains('Page'), isTrue);
+        expect(serializedXml.contains('Writer'), isFalse);
       });
     });
 
@@ -399,16 +413,16 @@ void main() {
     });
 
     group('XmlComicPageInfo Tests', () {
-      test('should create XmlComicPageInfo with default values', () {
+      test('should create XmlComicPageInfo with null values', () {
         final pageInfo = XmlComicPageInfo(image: 1);
 
         expect(pageInfo.image, equals(1));
-        expect(pageInfo.type, equals(XmlComicPageType.story));
-        expect(pageInfo.doublePage, isFalse);
-        expect(pageInfo.imageSize, equals(0));
-        expect(pageInfo.bookmark, equals(''));
-        expect(pageInfo.imageWidth, equals(-1));
-        expect(pageInfo.imageHeight, equals(-1));
+        expect(pageInfo.type, isNull);
+        expect(pageInfo.doublePage, isNull);
+        expect(pageInfo.imageSize, isNull);
+        expect(pageInfo.bookmark, isNull);
+        expect(pageInfo.imageWidth, isNull);
+        expect(pageInfo.imageHeight, isNull);
       });
 
       test('should create XmlComicPageInfo with custom values', () {
@@ -421,6 +435,41 @@ void main() {
           imageWidth: 2500,
           imageHeight: 3500,
         );
+
+        expect(pageInfo.image, equals(5));
+        expect(pageInfo.type, equals(XmlComicPageType.frontCover));
+        expect(pageInfo.doublePage, isTrue);
+        expect(pageInfo.imageSize, equals(2048000));
+        expect(pageInfo.bookmark, equals('Special Chapter'));
+        expect(pageInfo.imageWidth, equals(2500));
+        expect(pageInfo.imageHeight, equals(3500));
+      });
+
+      test(
+        'should create XmlComicPageInfo with default values using withDefaultValues',
+        () {
+          final pageInfo = XmlComicPageInfo(image: 1).withDefaultValues();
+
+          expect(pageInfo.image, equals(1));
+          expect(pageInfo.type, equals(XmlComicPageType.story));
+          expect(pageInfo.doublePage, isFalse);
+          expect(pageInfo.imageSize, equals(0));
+          expect(pageInfo.bookmark, equals(''));
+          expect(pageInfo.imageWidth, equals(-1));
+          expect(pageInfo.imageHeight, equals(-1));
+        },
+      );
+
+      test('withDefaultValues should preserve non-null values', () {
+        final pageInfo = XmlComicPageInfo(
+          image: 5,
+          type: XmlComicPageType.frontCover,
+          doublePage: true,
+          imageSize: 2048000,
+          bookmark: 'Special Chapter',
+          imageWidth: 2500,
+          imageHeight: 3500,
+        ).withDefaultValues();
 
         expect(pageInfo.image, equals(5));
         expect(pageInfo.type, equals(XmlComicPageType.frontCover));
@@ -455,25 +504,54 @@ void main() {
         expect(pagesInfo.pages![1].image, equals(2));
         expect(pagesInfo.pages![1].type, equals(XmlComicPageType.story));
       });
+
+      test(
+        'should create XmlArrayOfComicPageInfo with default values using withDefaultValues',
+        () {
+          final pagesInfo = XmlArrayOfComicPageInfo().withDefaultValues();
+
+          expect(pagesInfo.pages, isNotNull);
+          expect(pagesInfo.pages!.isEmpty, isTrue);
+        },
+      );
+
+      test('withDefaultValues should preserve non-null pages', () {
+        final page1 = XmlComicPageInfo(
+          image: 1,
+          type: XmlComicPageType.frontCover,
+        );
+        final page2 = XmlComicPageInfo(image: 2, type: XmlComicPageType.story);
+
+        final pagesInfo = XmlArrayOfComicPageInfo(
+          pages: [page1, page2],
+        ).withDefaultValues();
+
+        expect(pagesInfo.pages, isNotNull);
+        expect(pagesInfo.pages!.length, equals(2));
+        expect(pagesInfo.pages![0].image, equals(1));
+        expect(pagesInfo.pages![0].type, equals(XmlComicPageType.frontCover));
+        expect(pagesInfo.pages![1].image, equals(2));
+        expect(pagesInfo.pages![1].type, equals(XmlComicPageType.story));
+      });
     });
 
     group('XmlComicInfo Constructor Tests', () {
-      test('should create XmlComicInfo with default values', () {
+      test('should create XmlComicInfo with null values', () {
         final info = XmlComicInfo();
 
-        expect(info.title, equals(''));
-        expect(info.series, equals(''));
-        expect(info.number, equals(''));
-        expect(info.count, equals(-1));
-        expect(info.volume, equals(-1));
-        expect(info.year, equals(-1));
-        expect(info.month, equals(-1));
-        expect(info.day, equals(-1));
-        expect(info.pageCount, equals(0));
-        expect(info.communityRating, equals(0.0));
-        expect(info.blackAndWhite, equals(XmlYesNo.unknown));
-        expect(info.manga, equals(XmlManga.unknown));
-        expect(info.ageRating, equals(XmlAgeRating.unknown));
+        expect(info.title, isNull);
+        expect(info.series, isNull);
+        expect(info.number, isNull);
+        expect(info.count, isNull);
+        expect(info.volume, isNull);
+        expect(info.year, isNull);
+        expect(info.month, isNull);
+        expect(info.day, isNull);
+        expect(info.pageCount, isNull);
+        expect(info.communityRating, isNull);
+        expect(info.blackAndWhite, isNull);
+        expect(info.manga, isNull);
+        expect(info.ageRating, isNull);
         expect(info.pages, isNull);
       });
 
@@ -501,6 +579,71 @@ void main() {
           ageRating: XmlAgeRating.mature17,
           pages: pagesInfo,
         );
+
+        expect(info.title, equals('Custom Title'));
+        expect(info.series, equals('Custom Series'));
+        expect(info.number, equals('10'));
+        expect(info.count, equals(20));
+        expect(info.volume, equals(3));
+        expect(info.year, equals(2023));
+        expect(info.month, equals(12));
+        expect(info.day, equals(25));
+        expect(info.pageCount, equals(100));
+        expect(info.communityRating, equals(4.7));
+        expect(info.blackAndWhite, equals(XmlYesNo.yes));
+        expect(info.manga, equals(XmlManga.yesAndRightToLeft));
+        expect(info.ageRating, equals(XmlAgeRating.mature17));
+        expect(info.pages, isNotNull);
+        expect(info.pages!.pages, isNotNull);
+        expect(info.pages!.pages!.length, equals(2));
+      });
+
+      test(
+        'should create XmlComicInfo with default values using withDefaultValues',
+        () {
+          final info = XmlComicInfo().withDefaultValues();
+
+          expect(info.title, equals(''));
+          expect(info.series, equals(''));
+          expect(info.number, equals(''));
+          expect(info.count, equals(-1));
+          expect(info.volume, equals(-1));
+          expect(info.year, equals(-1));
+          expect(info.month, equals(-1));
+          expect(info.day, equals(-1));
+          expect(info.pageCount, equals(0));
+          expect(info.communityRating, equals(0.0));
+          expect(info.blackAndWhite, equals(XmlYesNo.unknown));
+          expect(info.manga, equals(XmlManga.unknown));
+          expect(info.ageRating, equals(XmlAgeRating.unknown));
+          expect(info.pages, isNull);
+        },
+      );
+
+      test('withDefaultValues should preserve non-null values', () {
+        final page1 = XmlComicPageInfo(
+          image: 1,
+          type: XmlComicPageType.frontCover,
+        );
+        final page2 = XmlComicPageInfo(image: 2, type: XmlComicPageType.story);
+        final pagesInfo = XmlArrayOfComicPageInfo(pages: [page1, page2]);
+
+        final info = XmlComicInfo(
+          title: 'Custom Title',
+          series: 'Custom Series',
+          number: '10',
+          count: 20,
+          volume: 3,
+          year: 2023,
+          month: 12,
+          day: 25,
+          pageCount: 100,
+          communityRating: 4.7,
+          blackAndWhite: XmlYesNo.yes,
+          manga: XmlManga.yesAndRightToLeft,
+          ageRating: XmlAgeRating.mature17,
+          pages: pagesInfo,
+        ).withDefaultValues();
 
         expect(info.title, equals('Custom Title'));
         expect(info.series, equals('Custom Series'));

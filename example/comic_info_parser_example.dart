@@ -13,4 +13,7 @@ void main() {
   final info = XmlComicInfo.fromXmlString(xml);
   print(info);
   print(info.toXmlString());
+
+  final infoWithDefaults = info.withDefaultValues();
+  print(infoWithDefaults.toXmlString());
 }

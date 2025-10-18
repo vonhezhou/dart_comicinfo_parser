@@ -317,448 +317,448 @@ void _$XmlComicInfoBuildXmlChildren(
 }) {
   final title = instance.title;
   final titleSerialized = title;
-  builder.element(
-    'Title',
-    nest: () {
-      if (titleSerialized != null) {
+  if (titleSerialized != null) {
+    builder.element(
+      'Title',
+      nest: () {
         builder.text(titleSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final series = instance.series;
   final seriesSerialized = series;
-  builder.element(
-    'Series',
-    nest: () {
-      if (seriesSerialized != null) {
+  if (seriesSerialized != null) {
+    builder.element(
+      'Series',
+      nest: () {
         builder.text(seriesSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final number = instance.number;
   final numberSerialized = number;
-  builder.element(
-    'Number',
-    nest: () {
-      if (numberSerialized != null) {
+  if (numberSerialized != null) {
+    builder.element(
+      'Number',
+      nest: () {
         builder.text(numberSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final count = instance.count;
   final countSerialized = count?.toString();
-  builder.element(
-    'Count',
-    nest: () {
-      if (countSerialized != null) {
+  if (countSerialized != null) {
+    builder.element(
+      'Count',
+      nest: () {
         builder.text(countSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final volume = instance.volume;
   final volumeSerialized = volume?.toString();
-  builder.element(
-    'Volume',
-    nest: () {
-      if (volumeSerialized != null) {
+  if (volumeSerialized != null) {
+    builder.element(
+      'Volume',
+      nest: () {
         builder.text(volumeSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final alternateSeries = instance.alternateSeries;
   final alternateSeriesSerialized = alternateSeries;
-  builder.element(
-    'AlternateSeries',
-    nest: () {
-      if (alternateSeriesSerialized != null) {
+  if (alternateSeriesSerialized != null) {
+    builder.element(
+      'AlternateSeries',
+      nest: () {
         builder.text(alternateSeriesSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final alternateNumber = instance.alternateNumber;
   final alternateNumberSerialized = alternateNumber;
-  builder.element(
-    'AlternateNumber',
-    nest: () {
-      if (alternateNumberSerialized != null) {
+  if (alternateNumberSerialized != null) {
+    builder.element(
+      'AlternateNumber',
+      nest: () {
         builder.text(alternateNumberSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final alternateCount = instance.alternateCount;
   final alternateCountSerialized = alternateCount?.toString();
-  builder.element(
-    'AlternateCount',
-    nest: () {
-      if (alternateCountSerialized != null) {
+  if (alternateCountSerialized != null) {
+    builder.element(
+      'AlternateCount',
+      nest: () {
         builder.text(alternateCountSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final summary = instance.summary;
   final summarySerialized = summary;
-  builder.element(
-    'Summary',
-    nest: () {
-      if (summarySerialized != null) {
+  if (summarySerialized != null) {
+    builder.element(
+      'Summary',
+      nest: () {
         builder.text(summarySerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final notes = instance.notes;
   final notesSerialized = notes;
-  builder.element(
-    'Notes',
-    nest: () {
-      if (notesSerialized != null) {
+  if (notesSerialized != null) {
+    builder.element(
+      'Notes',
+      nest: () {
         builder.text(notesSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final year = instance.year;
   final yearSerialized = year?.toString();
-  builder.element(
-    'Year',
-    nest: () {
-      if (yearSerialized != null) {
+  if (yearSerialized != null) {
+    builder.element(
+      'Year',
+      nest: () {
         builder.text(yearSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final month = instance.month;
   final monthSerialized = month?.toString();
-  builder.element(
-    'Month',
-    nest: () {
-      if (monthSerialized != null) {
+  if (monthSerialized != null) {
+    builder.element(
+      'Month',
+      nest: () {
         builder.text(monthSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final day = instance.day;
   final daySerialized = day?.toString();
-  builder.element(
-    'Day',
-    nest: () {
-      if (daySerialized != null) {
+  if (daySerialized != null) {
+    builder.element(
+      'Day',
+      nest: () {
         builder.text(daySerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final writer = instance.writer;
   final writerSerialized = writer;
-  builder.element(
-    'Writer',
-    nest: () {
-      if (writerSerialized != null) {
+  if (writerSerialized != null) {
+    builder.element(
+      'Writer',
+      nest: () {
         builder.text(writerSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final penciller = instance.penciller;
   final pencillerSerialized = penciller;
-  builder.element(
-    'Penciller',
-    nest: () {
-      if (pencillerSerialized != null) {
+  if (pencillerSerialized != null) {
+    builder.element(
+      'Penciller',
+      nest: () {
         builder.text(pencillerSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final inker = instance.inker;
   final inkerSerialized = inker;
-  builder.element(
-    'Inker',
-    nest: () {
-      if (inkerSerialized != null) {
+  if (inkerSerialized != null) {
+    builder.element(
+      'Inker',
+      nest: () {
         builder.text(inkerSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final colorist = instance.colorist;
   final coloristSerialized = colorist;
-  builder.element(
-    'Colorist',
-    nest: () {
-      if (coloristSerialized != null) {
+  if (coloristSerialized != null) {
+    builder.element(
+      'Colorist',
+      nest: () {
         builder.text(coloristSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final letterer = instance.letterer;
   final lettererSerialized = letterer;
-  builder.element(
-    'Letterer',
-    nest: () {
-      if (lettererSerialized != null) {
+  if (lettererSerialized != null) {
+    builder.element(
+      'Letterer',
+      nest: () {
         builder.text(lettererSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final coverArtist = instance.coverArtist;
   final coverArtistSerialized = coverArtist;
-  builder.element(
-    'CoverArtist',
-    nest: () {
-      if (coverArtistSerialized != null) {
+  if (coverArtistSerialized != null) {
+    builder.element(
+      'CoverArtist',
+      nest: () {
         builder.text(coverArtistSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final editor = instance.editor;
   final editorSerialized = editor;
-  builder.element(
-    'Editor',
-    nest: () {
-      if (editorSerialized != null) {
+  if (editorSerialized != null) {
+    builder.element(
+      'Editor',
+      nest: () {
         builder.text(editorSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final publisher = instance.publisher;
   final publisherSerialized = publisher;
-  builder.element(
-    'Publisher',
-    nest: () {
-      if (publisherSerialized != null) {
+  if (publisherSerialized != null) {
+    builder.element(
+      'Publisher',
+      nest: () {
         builder.text(publisherSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final translator = instance.translator;
   final translatorSerialized = translator;
-  builder.element(
-    'Translator',
-    nest: () {
-      if (translatorSerialized != null) {
+  if (translatorSerialized != null) {
+    builder.element(
+      'Translator',
+      nest: () {
         builder.text(translatorSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final imprint = instance.imprint;
   final imprintSerialized = imprint;
-  builder.element(
-    'Imprint',
-    nest: () {
-      if (imprintSerialized != null) {
+  if (imprintSerialized != null) {
+    builder.element(
+      'Imprint',
+      nest: () {
         builder.text(imprintSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final genre = instance.genre;
   final genreSerialized = genre;
-  builder.element(
-    'Genre',
-    nest: () {
-      if (genreSerialized != null) {
+  if (genreSerialized != null) {
+    builder.element(
+      'Genre',
+      nest: () {
         builder.text(genreSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final tags = instance.tags;
   final tagsSerialized = tags;
-  builder.element(
-    'Tags',
-    nest: () {
-      if (tagsSerialized != null) {
+  if (tagsSerialized != null) {
+    builder.element(
+      'Tags',
+      nest: () {
         builder.text(tagsSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final web = instance.web;
   final webSerialized = web;
-  builder.element(
-    'Web',
-    nest: () {
-      if (webSerialized != null) {
+  if (webSerialized != null) {
+    builder.element(
+      'Web',
+      nest: () {
         builder.text(webSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final pageCount = instance.pageCount;
   final pageCountSerialized = pageCount?.toString();
-  builder.element(
-    'PageCount',
-    nest: () {
-      if (pageCountSerialized != null) {
+  if (pageCountSerialized != null) {
+    builder.element(
+      'PageCount',
+      nest: () {
         builder.text(pageCountSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final languageISO = instance.languageISO;
   final languageISOSerialized = languageISO;
-  builder.element(
-    'LanguageISO',
-    nest: () {
-      if (languageISOSerialized != null) {
+  if (languageISOSerialized != null) {
+    builder.element(
+      'LanguageISO',
+      nest: () {
         builder.text(languageISOSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final format = instance.format;
   final formatSerialized = format;
-  builder.element(
-    'Format',
-    nest: () {
-      if (formatSerialized != null) {
+  if (formatSerialized != null) {
+    builder.element(
+      'Format',
+      nest: () {
         builder.text(formatSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final blackAndWhite = instance.blackAndWhite;
   final blackAndWhiteSerialized = blackAndWhite != null
       ? $XmlYesNoEnumMap[blackAndWhite]!
       : null;
-  builder.element(
-    'BlackAndWhite',
-    nest: () {
-      if (blackAndWhiteSerialized != null) {
+  if (blackAndWhiteSerialized != null) {
+    builder.element(
+      'BlackAndWhite',
+      nest: () {
         builder.text(blackAndWhiteSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final manga = instance.manga;
   final mangaSerialized = manga != null ? $XmlMangaEnumMap[manga]! : null;
-  builder.element(
-    'Manga',
-    nest: () {
-      if (mangaSerialized != null) {
+  if (mangaSerialized != null) {
+    builder.element(
+      'Manga',
+      nest: () {
         builder.text(mangaSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final characters = instance.characters;
   final charactersSerialized = characters;
-  builder.element(
-    'Characters',
-    nest: () {
-      if (charactersSerialized != null) {
+  if (charactersSerialized != null) {
+    builder.element(
+      'Characters',
+      nest: () {
         builder.text(charactersSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final teams = instance.teams;
   final teamsSerialized = teams;
-  builder.element(
-    'Teams',
-    nest: () {
-      if (teamsSerialized != null) {
+  if (teamsSerialized != null) {
+    builder.element(
+      'Teams',
+      nest: () {
         builder.text(teamsSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final locations = instance.locations;
   final locationsSerialized = locations;
-  builder.element(
-    'Locations',
-    nest: () {
-      if (locationsSerialized != null) {
+  if (locationsSerialized != null) {
+    builder.element(
+      'Locations',
+      nest: () {
         builder.text(locationsSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final mainCharacterOrTeam = instance.mainCharacterOrTeam;
   final mainCharacterOrTeamSerialized = mainCharacterOrTeam;
-  builder.element(
-    'MainCharacterOrTeam',
-    nest: () {
-      if (mainCharacterOrTeamSerialized != null) {
+  if (mainCharacterOrTeamSerialized != null) {
+    builder.element(
+      'MainCharacterOrTeam',
+      nest: () {
         builder.text(mainCharacterOrTeamSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final scanInformation = instance.scanInformation;
   final scanInformationSerialized = scanInformation;
-  builder.element(
-    'ScanInformation',
-    nest: () {
-      if (scanInformationSerialized != null) {
+  if (scanInformationSerialized != null) {
+    builder.element(
+      'ScanInformation',
+      nest: () {
         builder.text(scanInformationSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final storyArc = instance.storyArc;
   final storyArcSerialized = storyArc;
-  builder.element(
-    'StoryArc',
-    nest: () {
-      if (storyArcSerialized != null) {
+  if (storyArcSerialized != null) {
+    builder.element(
+      'StoryArc',
+      nest: () {
         builder.text(storyArcSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final storyArcNumber = instance.storyArcNumber;
   final storyArcNumberSerialized = storyArcNumber;
-  builder.element(
-    'StoryArcNumber',
-    nest: () {
-      if (storyArcNumberSerialized != null) {
+  if (storyArcNumberSerialized != null) {
+    builder.element(
+      'StoryArcNumber',
+      nest: () {
         builder.text(storyArcNumberSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final seriesGroup = instance.seriesGroup;
   final seriesGroupSerialized = seriesGroup;
-  builder.element(
-    'SeriesGroup',
-    nest: () {
-      if (seriesGroupSerialized != null) {
+  if (seriesGroupSerialized != null) {
+    builder.element(
+      'SeriesGroup',
+      nest: () {
         builder.text(seriesGroupSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final ageRating = instance.ageRating;
   final ageRatingSerialized = ageRating != null
       ? $XmlAgeRatingEnumMap[ageRating]!
       : null;
-  builder.element(
-    'AgeRating',
-    nest: () {
-      if (ageRatingSerialized != null) {
+  if (ageRatingSerialized != null) {
+    builder.element(
+      'AgeRating',
+      nest: () {
         builder.text(ageRatingSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final communityRating = instance.communityRating;
   final communityRatingSerialized = communityRating?.toString();
-  builder.element(
-    'CommunityRating',
-    nest: () {
-      if (communityRatingSerialized != null) {
+  if (communityRatingSerialized != null) {
+    builder.element(
+      'CommunityRating',
+      nest: () {
         builder.text(communityRatingSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final review = instance.review;
   final reviewSerialized = review;
-  builder.element(
-    'Review',
-    nest: () {
-      if (reviewSerialized != null) {
+  if (reviewSerialized != null) {
+    builder.element(
+      'Review',
+      nest: () {
         builder.text(reviewSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final gtin = instance.gtin;
   final gtinSerialized = gtin;
-  builder.element(
-    'GTIN',
-    nest: () {
-      if (gtinSerialized != null) {
+  if (gtinSerialized != null) {
+    builder.element(
+      'GTIN',
+      nest: () {
         builder.text(gtinSerialized);
-      }
-    },
-  );
+      },
+    );
+  }
   final pages = instance.pages;
   final pagesSerialized = pages;
-  builder.element(
-    'Pages',
-    nest: () {
-      if (pagesSerialized != null) {
+  if (pagesSerialized != null) {
+    builder.element(
+      'Pages',
+      nest: () {
         pagesSerialized.buildXmlChildren(builder, namespaces: namespaces);
-      }
-    },
-  );
+      },
+    );
+  }
 }
 
 void _$XmlComicInfoBuildXmlElement(
@@ -916,370 +916,380 @@ List<XmlNode> _$XmlComicInfoToXmlChildren(
   final children = <XmlNode>[];
   final title = instance.title;
   final titleSerialized = title;
-  final titleConstructed = XmlElement(
-    XmlName('Title'),
-    [],
-    titleSerialized != null ? [XmlText(titleSerialized)] : [],
-  );
-  children.add(titleConstructed);
+  final titleConstructed = titleSerialized != null
+      ? XmlElement(XmlName('Title'), [], [XmlText(titleSerialized)])
+      : null;
+  if (titleConstructed != null) {
+    children.add(titleConstructed);
+  }
   final series = instance.series;
   final seriesSerialized = series;
-  final seriesConstructed = XmlElement(
-    XmlName('Series'),
-    [],
-    seriesSerialized != null ? [XmlText(seriesSerialized)] : [],
-  );
-  children.add(seriesConstructed);
+  final seriesConstructed = seriesSerialized != null
+      ? XmlElement(XmlName('Series'), [], [XmlText(seriesSerialized)])
+      : null;
+  if (seriesConstructed != null) {
+    children.add(seriesConstructed);
+  }
   final number = instance.number;
   final numberSerialized = number;
-  final numberConstructed = XmlElement(
-    XmlName('Number'),
-    [],
-    numberSerialized != null ? [XmlText(numberSerialized)] : [],
-  );
-  children.add(numberConstructed);
+  final numberConstructed = numberSerialized != null
+      ? XmlElement(XmlName('Number'), [], [XmlText(numberSerialized)])
+      : null;
+  if (numberConstructed != null) {
+    children.add(numberConstructed);
+  }
   final count = instance.count;
   final countSerialized = count?.toString();
-  final countConstructed = XmlElement(
-    XmlName('Count'),
-    [],
-    countSerialized != null ? [XmlText(countSerialized)] : [],
-  );
-  children.add(countConstructed);
+  final countConstructed = countSerialized != null
+      ? XmlElement(XmlName('Count'), [], [XmlText(countSerialized)])
+      : null;
+  if (countConstructed != null) {
+    children.add(countConstructed);
+  }
   final volume = instance.volume;
   final volumeSerialized = volume?.toString();
-  final volumeConstructed = XmlElement(
-    XmlName('Volume'),
-    [],
-    volumeSerialized != null ? [XmlText(volumeSerialized)] : [],
-  );
-  children.add(volumeConstructed);
+  final volumeConstructed = volumeSerialized != null
+      ? XmlElement(XmlName('Volume'), [], [XmlText(volumeSerialized)])
+      : null;
+  if (volumeConstructed != null) {
+    children.add(volumeConstructed);
+  }
   final alternateSeries = instance.alternateSeries;
   final alternateSeriesSerialized = alternateSeries;
-  final alternateSeriesConstructed = XmlElement(
-    XmlName('AlternateSeries'),
-    [],
-    alternateSeriesSerialized != null
-        ? [XmlText(alternateSeriesSerialized)]
-        : [],
-  );
-  children.add(alternateSeriesConstructed);
+  final alternateSeriesConstructed = alternateSeriesSerialized != null
+      ? XmlElement(XmlName('AlternateSeries'), [], [
+          XmlText(alternateSeriesSerialized),
+        ])
+      : null;
+  if (alternateSeriesConstructed != null) {
+    children.add(alternateSeriesConstructed);
+  }
   final alternateNumber = instance.alternateNumber;
   final alternateNumberSerialized = alternateNumber;
-  final alternateNumberConstructed = XmlElement(
-    XmlName('AlternateNumber'),
-    [],
-    alternateNumberSerialized != null
-        ? [XmlText(alternateNumberSerialized)]
-        : [],
-  );
-  children.add(alternateNumberConstructed);
+  final alternateNumberConstructed = alternateNumberSerialized != null
+      ? XmlElement(XmlName('AlternateNumber'), [], [
+          XmlText(alternateNumberSerialized),
+        ])
+      : null;
+  if (alternateNumberConstructed != null) {
+    children.add(alternateNumberConstructed);
+  }
   final alternateCount = instance.alternateCount;
   final alternateCountSerialized = alternateCount?.toString();
-  final alternateCountConstructed = XmlElement(
-    XmlName('AlternateCount'),
-    [],
-    alternateCountSerialized != null ? [XmlText(alternateCountSerialized)] : [],
-  );
-  children.add(alternateCountConstructed);
+  final alternateCountConstructed = alternateCountSerialized != null
+      ? XmlElement(XmlName('AlternateCount'), [], [
+          XmlText(alternateCountSerialized),
+        ])
+      : null;
+  if (alternateCountConstructed != null) {
+    children.add(alternateCountConstructed);
+  }
   final summary = instance.summary;
   final summarySerialized = summary;
-  final summaryConstructed = XmlElement(
-    XmlName('Summary'),
-    [],
-    summarySerialized != null ? [XmlText(summarySerialized)] : [],
-  );
-  children.add(summaryConstructed);
+  final summaryConstructed = summarySerialized != null
+      ? XmlElement(XmlName('Summary'), [], [XmlText(summarySerialized)])
+      : null;
+  if (summaryConstructed != null) {
+    children.add(summaryConstructed);
+  }
   final notes = instance.notes;
   final notesSerialized = notes;
-  final notesConstructed = XmlElement(
-    XmlName('Notes'),
-    [],
-    notesSerialized != null ? [XmlText(notesSerialized)] : [],
-  );
-  children.add(notesConstructed);
+  final notesConstructed = notesSerialized != null
+      ? XmlElement(XmlName('Notes'), [], [XmlText(notesSerialized)])
+      : null;
+  if (notesConstructed != null) {
+    children.add(notesConstructed);
+  }
   final year = instance.year;
   final yearSerialized = year?.toString();
-  final yearConstructed = XmlElement(
-    XmlName('Year'),
-    [],
-    yearSerialized != null ? [XmlText(yearSerialized)] : [],
-  );
-  children.add(yearConstructed);
+  final yearConstructed = yearSerialized != null
+      ? XmlElement(XmlName('Year'), [], [XmlText(yearSerialized)])
+      : null;
+  if (yearConstructed != null) {
+    children.add(yearConstructed);
+  }
   final month = instance.month;
   final monthSerialized = month?.toString();
-  final monthConstructed = XmlElement(
-    XmlName('Month'),
-    [],
-    monthSerialized != null ? [XmlText(monthSerialized)] : [],
-  );
-  children.add(monthConstructed);
+  final monthConstructed = monthSerialized != null
+      ? XmlElement(XmlName('Month'), [], [XmlText(monthSerialized)])
+      : null;
+  if (monthConstructed != null) {
+    children.add(monthConstructed);
+  }
   final day = instance.day;
   final daySerialized = day?.toString();
-  final dayConstructed = XmlElement(
-    XmlName('Day'),
-    [],
-    daySerialized != null ? [XmlText(daySerialized)] : [],
-  );
-  children.add(dayConstructed);
+  final dayConstructed = daySerialized != null
+      ? XmlElement(XmlName('Day'), [], [XmlText(daySerialized)])
+      : null;
+  if (dayConstructed != null) {
+    children.add(dayConstructed);
+  }
   final writer = instance.writer;
   final writerSerialized = writer;
-  final writerConstructed = XmlElement(
-    XmlName('Writer'),
-    [],
-    writerSerialized != null ? [XmlText(writerSerialized)] : [],
-  );
-  children.add(writerConstructed);
+  final writerConstructed = writerSerialized != null
+      ? XmlElement(XmlName('Writer'), [], [XmlText(writerSerialized)])
+      : null;
+  if (writerConstructed != null) {
+    children.add(writerConstructed);
+  }
   final penciller = instance.penciller;
   final pencillerSerialized = penciller;
-  final pencillerConstructed = XmlElement(
-    XmlName('Penciller'),
-    [],
-    pencillerSerialized != null ? [XmlText(pencillerSerialized)] : [],
-  );
-  children.add(pencillerConstructed);
+  final pencillerConstructed = pencillerSerialized != null
+      ? XmlElement(XmlName('Penciller'), [], [XmlText(pencillerSerialized)])
+      : null;
+  if (pencillerConstructed != null) {
+    children.add(pencillerConstructed);
+  }
   final inker = instance.inker;
   final inkerSerialized = inker;
-  final inkerConstructed = XmlElement(
-    XmlName('Inker'),
-    [],
-    inkerSerialized != null ? [XmlText(inkerSerialized)] : [],
-  );
-  children.add(inkerConstructed);
+  final inkerConstructed = inkerSerialized != null
+      ? XmlElement(XmlName('Inker'), [], [XmlText(inkerSerialized)])
+      : null;
+  if (inkerConstructed != null) {
+    children.add(inkerConstructed);
+  }
   final colorist = instance.colorist;
   final coloristSerialized = colorist;
-  final coloristConstructed = XmlElement(
-    XmlName('Colorist'),
-    [],
-    coloristSerialized != null ? [XmlText(coloristSerialized)] : [],
-  );
-  children.add(coloristConstructed);
+  final coloristConstructed = coloristSerialized != null
+      ? XmlElement(XmlName('Colorist'), [], [XmlText(coloristSerialized)])
+      : null;
+  if (coloristConstructed != null) {
+    children.add(coloristConstructed);
+  }
   final letterer = instance.letterer;
   final lettererSerialized = letterer;
-  final lettererConstructed = XmlElement(
-    XmlName('Letterer'),
-    [],
-    lettererSerialized != null ? [XmlText(lettererSerialized)] : [],
-  );
-  children.add(lettererConstructed);
+  final lettererConstructed = lettererSerialized != null
+      ? XmlElement(XmlName('Letterer'), [], [XmlText(lettererSerialized)])
+      : null;
+  if (lettererConstructed != null) {
+    children.add(lettererConstructed);
+  }
   final coverArtist = instance.coverArtist;
   final coverArtistSerialized = coverArtist;
-  final coverArtistConstructed = XmlElement(
-    XmlName('CoverArtist'),
-    [],
-    coverArtistSerialized != null ? [XmlText(coverArtistSerialized)] : [],
-  );
-  children.add(coverArtistConstructed);
+  final coverArtistConstructed = coverArtistSerialized != null
+      ? XmlElement(XmlName('CoverArtist'), [], [XmlText(coverArtistSerialized)])
+      : null;
+  if (coverArtistConstructed != null) {
+    children.add(coverArtistConstructed);
+  }
   final editor = instance.editor;
   final editorSerialized = editor;
-  final editorConstructed = XmlElement(
-    XmlName('Editor'),
-    [],
-    editorSerialized != null ? [XmlText(editorSerialized)] : [],
-  );
-  children.add(editorConstructed);
+  final editorConstructed = editorSerialized != null
+      ? XmlElement(XmlName('Editor'), [], [XmlText(editorSerialized)])
+      : null;
+  if (editorConstructed != null) {
+    children.add(editorConstructed);
+  }
   final publisher = instance.publisher;
   final publisherSerialized = publisher;
-  final publisherConstructed = XmlElement(
-    XmlName('Publisher'),
-    [],
-    publisherSerialized != null ? [XmlText(publisherSerialized)] : [],
-  );
-  children.add(publisherConstructed);
+  final publisherConstructed = publisherSerialized != null
+      ? XmlElement(XmlName('Publisher'), [], [XmlText(publisherSerialized)])
+      : null;
+  if (publisherConstructed != null) {
+    children.add(publisherConstructed);
+  }
   final translator = instance.translator;
   final translatorSerialized = translator;
-  final translatorConstructed = XmlElement(
-    XmlName('Translator'),
-    [],
-    translatorSerialized != null ? [XmlText(translatorSerialized)] : [],
-  );
-  children.add(translatorConstructed);
+  final translatorConstructed = translatorSerialized != null
+      ? XmlElement(XmlName('Translator'), [], [XmlText(translatorSerialized)])
+      : null;
+  if (translatorConstructed != null) {
+    children.add(translatorConstructed);
+  }
   final imprint = instance.imprint;
   final imprintSerialized = imprint;
-  final imprintConstructed = XmlElement(
-    XmlName('Imprint'),
-    [],
-    imprintSerialized != null ? [XmlText(imprintSerialized)] : [],
-  );
-  children.add(imprintConstructed);
+  final imprintConstructed = imprintSerialized != null
+      ? XmlElement(XmlName('Imprint'), [], [XmlText(imprintSerialized)])
+      : null;
+  if (imprintConstructed != null) {
+    children.add(imprintConstructed);
+  }
   final genre = instance.genre;
   final genreSerialized = genre;
-  final genreConstructed = XmlElement(
-    XmlName('Genre'),
-    [],
-    genreSerialized != null ? [XmlText(genreSerialized)] : [],
-  );
-  children.add(genreConstructed);
+  final genreConstructed = genreSerialized != null
+      ? XmlElement(XmlName('Genre'), [], [XmlText(genreSerialized)])
+      : null;
+  if (genreConstructed != null) {
+    children.add(genreConstructed);
+  }
   final tags = instance.tags;
   final tagsSerialized = tags;
-  final tagsConstructed = XmlElement(
-    XmlName('Tags'),
-    [],
-    tagsSerialized != null ? [XmlText(tagsSerialized)] : [],
-  );
-  children.add(tagsConstructed);
+  final tagsConstructed = tagsSerialized != null
+      ? XmlElement(XmlName('Tags'), [], [XmlText(tagsSerialized)])
+      : null;
+  if (tagsConstructed != null) {
+    children.add(tagsConstructed);
+  }
   final web = instance.web;
   final webSerialized = web;
-  final webConstructed = XmlElement(
-    XmlName('Web'),
-    [],
-    webSerialized != null ? [XmlText(webSerialized)] : [],
-  );
-  children.add(webConstructed);
+  final webConstructed = webSerialized != null
+      ? XmlElement(XmlName('Web'), [], [XmlText(webSerialized)])
+      : null;
+  if (webConstructed != null) {
+    children.add(webConstructed);
+  }
   final pageCount = instance.pageCount;
   final pageCountSerialized = pageCount?.toString();
-  final pageCountConstructed = XmlElement(
-    XmlName('PageCount'),
-    [],
-    pageCountSerialized != null ? [XmlText(pageCountSerialized)] : [],
-  );
-  children.add(pageCountConstructed);
+  final pageCountConstructed = pageCountSerialized != null
+      ? XmlElement(XmlName('PageCount'), [], [XmlText(pageCountSerialized)])
+      : null;
+  if (pageCountConstructed != null) {
+    children.add(pageCountConstructed);
+  }
   final languageISO = instance.languageISO;
   final languageISOSerialized = languageISO;
-  final languageISOConstructed = XmlElement(
-    XmlName('LanguageISO'),
-    [],
-    languageISOSerialized != null ? [XmlText(languageISOSerialized)] : [],
-  );
-  children.add(languageISOConstructed);
+  final languageISOConstructed = languageISOSerialized != null
+      ? XmlElement(XmlName('LanguageISO'), [], [XmlText(languageISOSerialized)])
+      : null;
+  if (languageISOConstructed != null) {
+    children.add(languageISOConstructed);
+  }
   final format = instance.format;
   final formatSerialized = format;
-  final formatConstructed = XmlElement(
-    XmlName('Format'),
-    [],
-    formatSerialized != null ? [XmlText(formatSerialized)] : [],
-  );
-  children.add(formatConstructed);
+  final formatConstructed = formatSerialized != null
+      ? XmlElement(XmlName('Format'), [], [XmlText(formatSerialized)])
+      : null;
+  if (formatConstructed != null) {
+    children.add(formatConstructed);
+  }
   final blackAndWhite = instance.blackAndWhite;
   final blackAndWhiteSerialized = blackAndWhite != null
       ? $XmlYesNoEnumMap[blackAndWhite]!
       : null;
-  final blackAndWhiteConstructed = XmlElement(
-    XmlName('BlackAndWhite'),
-    [],
-    blackAndWhiteSerialized != null ? [XmlText(blackAndWhiteSerialized)] : [],
-  );
-  children.add(blackAndWhiteConstructed);
+  final blackAndWhiteConstructed = blackAndWhiteSerialized != null
+      ? XmlElement(XmlName('BlackAndWhite'), [], [
+          XmlText(blackAndWhiteSerialized),
+        ])
+      : null;
+  if (blackAndWhiteConstructed != null) {
+    children.add(blackAndWhiteConstructed);
+  }
   final manga = instance.manga;
   final mangaSerialized = manga != null ? $XmlMangaEnumMap[manga]! : null;
-  final mangaConstructed = XmlElement(
-    XmlName('Manga'),
-    [],
-    mangaSerialized != null ? [XmlText(mangaSerialized)] : [],
-  );
-  children.add(mangaConstructed);
+  final mangaConstructed = mangaSerialized != null
+      ? XmlElement(XmlName('Manga'), [], [XmlText(mangaSerialized)])
+      : null;
+  if (mangaConstructed != null) {
+    children.add(mangaConstructed);
+  }
   final characters = instance.characters;
   final charactersSerialized = characters;
-  final charactersConstructed = XmlElement(
-    XmlName('Characters'),
-    [],
-    charactersSerialized != null ? [XmlText(charactersSerialized)] : [],
-  );
-  children.add(charactersConstructed);
+  final charactersConstructed = charactersSerialized != null
+      ? XmlElement(XmlName('Characters'), [], [XmlText(charactersSerialized)])
+      : null;
+  if (charactersConstructed != null) {
+    children.add(charactersConstructed);
+  }
   final teams = instance.teams;
   final teamsSerialized = teams;
-  final teamsConstructed = XmlElement(
-    XmlName('Teams'),
-    [],
-    teamsSerialized != null ? [XmlText(teamsSerialized)] : [],
-  );
-  children.add(teamsConstructed);
+  final teamsConstructed = teamsSerialized != null
+      ? XmlElement(XmlName('Teams'), [], [XmlText(teamsSerialized)])
+      : null;
+  if (teamsConstructed != null) {
+    children.add(teamsConstructed);
+  }
   final locations = instance.locations;
   final locationsSerialized = locations;
-  final locationsConstructed = XmlElement(
-    XmlName('Locations'),
-    [],
-    locationsSerialized != null ? [XmlText(locationsSerialized)] : [],
-  );
-  children.add(locationsConstructed);
+  final locationsConstructed = locationsSerialized != null
+      ? XmlElement(XmlName('Locations'), [], [XmlText(locationsSerialized)])
+      : null;
+  if (locationsConstructed != null) {
+    children.add(locationsConstructed);
+  }
   final mainCharacterOrTeam = instance.mainCharacterOrTeam;
   final mainCharacterOrTeamSerialized = mainCharacterOrTeam;
-  final mainCharacterOrTeamConstructed = XmlElement(
-    XmlName('MainCharacterOrTeam'),
-    [],
-    mainCharacterOrTeamSerialized != null
-        ? [XmlText(mainCharacterOrTeamSerialized)]
-        : [],
-  );
-  children.add(mainCharacterOrTeamConstructed);
+  final mainCharacterOrTeamConstructed = mainCharacterOrTeamSerialized != null
+      ? XmlElement(XmlName('MainCharacterOrTeam'), [], [
+          XmlText(mainCharacterOrTeamSerialized),
+        ])
+      : null;
+  if (mainCharacterOrTeamConstructed != null) {
+    children.add(mainCharacterOrTeamConstructed);
+  }
   final scanInformation = instance.scanInformation;
   final scanInformationSerialized = scanInformation;
-  final scanInformationConstructed = XmlElement(
-    XmlName('ScanInformation'),
-    [],
-    scanInformationSerialized != null
-        ? [XmlText(scanInformationSerialized)]
-        : [],
-  );
-  children.add(scanInformationConstructed);
+  final scanInformationConstructed = scanInformationSerialized != null
+      ? XmlElement(XmlName('ScanInformation'), [], [
+          XmlText(scanInformationSerialized),
+        ])
+      : null;
+  if (scanInformationConstructed != null) {
+    children.add(scanInformationConstructed);
+  }
   final storyArc = instance.storyArc;
   final storyArcSerialized = storyArc;
-  final storyArcConstructed = XmlElement(
-    XmlName('StoryArc'),
-    [],
-    storyArcSerialized != null ? [XmlText(storyArcSerialized)] : [],
-  );
-  children.add(storyArcConstructed);
+  final storyArcConstructed = storyArcSerialized != null
+      ? XmlElement(XmlName('StoryArc'), [], [XmlText(storyArcSerialized)])
+      : null;
+  if (storyArcConstructed != null) {
+    children.add(storyArcConstructed);
+  }
   final storyArcNumber = instance.storyArcNumber;
   final storyArcNumberSerialized = storyArcNumber;
-  final storyArcNumberConstructed = XmlElement(
-    XmlName('StoryArcNumber'),
-    [],
-    storyArcNumberSerialized != null ? [XmlText(storyArcNumberSerialized)] : [],
-  );
-  children.add(storyArcNumberConstructed);
+  final storyArcNumberConstructed = storyArcNumberSerialized != null
+      ? XmlElement(XmlName('StoryArcNumber'), [], [
+          XmlText(storyArcNumberSerialized),
+        ])
+      : null;
+  if (storyArcNumberConstructed != null) {
+    children.add(storyArcNumberConstructed);
+  }
   final seriesGroup = instance.seriesGroup;
   final seriesGroupSerialized = seriesGroup;
-  final seriesGroupConstructed = XmlElement(
-    XmlName('SeriesGroup'),
-    [],
-    seriesGroupSerialized != null ? [XmlText(seriesGroupSerialized)] : [],
-  );
-  children.add(seriesGroupConstructed);
+  final seriesGroupConstructed = seriesGroupSerialized != null
+      ? XmlElement(XmlName('SeriesGroup'), [], [XmlText(seriesGroupSerialized)])
+      : null;
+  if (seriesGroupConstructed != null) {
+    children.add(seriesGroupConstructed);
+  }
   final ageRating = instance.ageRating;
   final ageRatingSerialized = ageRating != null
       ? $XmlAgeRatingEnumMap[ageRating]!
       : null;
-  final ageRatingConstructed = XmlElement(
-    XmlName('AgeRating'),
-    [],
-    ageRatingSerialized != null ? [XmlText(ageRatingSerialized)] : [],
-  );
-  children.add(ageRatingConstructed);
+  final ageRatingConstructed = ageRatingSerialized != null
+      ? XmlElement(XmlName('AgeRating'), [], [XmlText(ageRatingSerialized)])
+      : null;
+  if (ageRatingConstructed != null) {
+    children.add(ageRatingConstructed);
+  }
   final communityRating = instance.communityRating;
   final communityRatingSerialized = communityRating?.toString();
-  final communityRatingConstructed = XmlElement(
-    XmlName('CommunityRating'),
-    [],
-    communityRatingSerialized != null
-        ? [XmlText(communityRatingSerialized)]
-        : [],
-  );
-  children.add(communityRatingConstructed);
+  final communityRatingConstructed = communityRatingSerialized != null
+      ? XmlElement(XmlName('CommunityRating'), [], [
+          XmlText(communityRatingSerialized),
+        ])
+      : null;
+  if (communityRatingConstructed != null) {
+    children.add(communityRatingConstructed);
+  }
   final review = instance.review;
   final reviewSerialized = review;
-  final reviewConstructed = XmlElement(
-    XmlName('Review'),
-    [],
-    reviewSerialized != null ? [XmlText(reviewSerialized)] : [],
-  );
-  children.add(reviewConstructed);
+  final reviewConstructed = reviewSerialized != null
+      ? XmlElement(XmlName('Review'), [], [XmlText(reviewSerialized)])
+      : null;
+  if (reviewConstructed != null) {
+    children.add(reviewConstructed);
+  }
   final gtin = instance.gtin;
   final gtinSerialized = gtin;
-  final gtinConstructed = XmlElement(
-    XmlName('GTIN'),
-    [],
-    gtinSerialized != null ? [XmlText(gtinSerialized)] : [],
-  );
-  children.add(gtinConstructed);
+  final gtinConstructed = gtinSerialized != null
+      ? XmlElement(XmlName('GTIN'), [], [XmlText(gtinSerialized)])
+      : null;
+  if (gtinConstructed != null) {
+    children.add(gtinConstructed);
+  }
   final pages = instance.pages;
   final pagesSerialized = pages;
-  final pagesConstructed = XmlElement(
-    XmlName('Pages'),
-    pagesSerialized?.toXmlAttributes(namespaces: namespaces) ?? [],
-    pagesSerialized?.toXmlChildren(namespaces: namespaces) ?? [],
-  );
-  children.add(pagesConstructed);
+  final pagesConstructed = pagesSerialized != null
+      ? XmlElement(
+          XmlName('Pages'),
+          pagesSerialized.toXmlAttributes(namespaces: namespaces),
+          pagesSerialized.toXmlChildren(namespaces: namespaces),
+        )
+      : null;
+  if (pagesConstructed != null) {
+    children.add(pagesConstructed);
+  }
   return children;
 }
 
