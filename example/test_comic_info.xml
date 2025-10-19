@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ComicInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/ComicInfo_v2_1.xsd">
+<ComicInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../xsd/comicinfo_v2_1.xsd">
   <Title>Test</Title>
   <Series>Test Series</Series>
   <Number>1</Number>
@@ -14,15 +15,13 @@
   <Tags>Test Tag1, Test Tag2</Tags>
   <Characters>Test Character1, Test Character2</Characters>
   <Teams>Test Team1, Test Team2</Teams>
-  <ScanInfo>Test Scan Info</ScanInfo>
-  <Language>en</Language>
+  <ScanInformation>Test Scan Info</ScanInformation>
+  <LanguageISO>en</LanguageISO>
   <Pages>
-    <Page Image='1' Bookmark='chapter 1' ></Page>
+    <Page Image='1' Bookmark='chapter 1'></Page>
   </Pages>
   <Format>Hardcover</Format>
   <SeriesGroup>Test Series Group</SeriesGroup>
-  <Rating>Everyone</Rating>
-  <SeriesType>Test Series Type</SeriesType>
+  <AgeRating>Everyone</AgeRating>
   <StoryArc>Test Story Arc</StoryArc>
-  <SeriesStatus>Test Series Status</SeriesStatus>
 </ComicInfo>
